@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Predictor</title>
+    <style>
+        body {
+            background-color: rgb(41, 133, 245);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        label {
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            background-color: rgba(45, 60, 79, 0.9);
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(78, 59, 59, 0.2);
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .predict {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 230px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .predict:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">Employee Data Predictor</h1>
+    <form action="/predict" method="post">
+            <label for="JobTitle">Job Title:</label>
+            <select name="JobTitle" id="JobTitle">
+                <option value="Marketing Associate">Marketing Associate</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Financial Analyst">Financial Analyst</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="IT">IT</option>
+                <option value="Sales Associate">Sales Associate</option>
+                <option value="Driver">Driver</option>
+                <option value="Warehouse Associate">Warehouse Associate</option>
+                <option value="Manager">Manager</option>
+            </select>
+        
+        <label for="Gender">Gender:</label>
+        <select name="Gender" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="Age">Age:</label>
+        <input type="text" name="Age" id="Age">
+
+        <label for="PerfEval">Performance Evaluation:</label>
+        <input type="text" name="PerfEval" id="PerfEval">
+
+        <label for="Education">Education:</label>
+        <select name="Education" id="Education">
+            <option value="High School">High School</option>
+            <option value="Masters">Masters</option>
+            <option value="College">College</option>
+            <option value="PhD">PhD</option>
+        </select>
+
+        <label for="Dept">Department:</label>
+        <select name="Dept" id="Dept">
+            <option value="Operations">Operations</option>
+            <option value="Sales">Sales</option>
+            <option value="Management">Management</option>
+            <option value="Administration">Administration</option>
+            <option value="Engineering">Engineering</option>
+        </select>
+
+        <label for="Seniority">Seniority:</label>
+        <input type="text" name="Seniority" id="Seniority">
+
+        <button type="submit" class="predict">Predict</button>
+    </form>
+</body>
+</html>
