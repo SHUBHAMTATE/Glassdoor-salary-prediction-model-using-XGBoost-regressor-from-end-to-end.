@@ -17,7 +17,7 @@ def prediction_input_data(input_df):
 @app.route("/")
 def display_form():
     return render_template("home.html")
-
+#root
 @app.route("/predict", methods=["POST"])
 def get_input_data():
     input_data = [
